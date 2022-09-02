@@ -1,0 +1,42 @@
+<div class="wrapper" [formGroup]="filterForm">
+  <div class="heading">Filter Results</div>
+  <div class="form-input">
+    <label for="name">Name (contains)</label>
+    <input type="text"
+           formControlName="name"
+           id="name"
+           placeholder="Text string"
+           autocomplete="off"
+    >
+  </div>
+  <div class="row">
+    <div class="form-input">
+      <label for="score">Minimun Score</label>
+      <div class="score-field"
+           (click)="isScoreInputShown = !isScoreInputShown"
+      >{{ filterForm.value.score[0] }} - {{ filterForm.value.score[1] }}</div>
+      <div class="score-input" *ngIf="isScoreInputShown" @fadeSlideInOut>
+        <app-range-slider formControlName="score"></app-range-slider>
+      </div>
+    </div>
+    <div class="form-input">
+      <label for="order-by">Order By</label>
+      <div class="order-box">
+        <div class="direction" (click)="toggleDirection()">
+          <fa-icon class="icon"
+                   [icon]="faArrowUp"
+                   [ngClass]="{'rotated': filterForm.value.isAscending === false}"
+          ></fa-icon>
+          <input type="checkbox" formControlName="isAscending">
+        </div>
+        <select class="order-select" formControlName="orderBy" id="order-by">
+          <option value="first_release_date">Release Date</option>
+          <option value="rating">Score</option>
+          <option value="name">Name</option>
+        </select>
+        <fa-icon [icon]="faCaretDown" class="select-arrow icon"></fa-icon>
+      </div>
+    </div>
+    <button class="clear" (click)="clear()">Clear</button>
+  </div>
+</div>

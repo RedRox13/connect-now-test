@@ -1,0 +1,11 @@
+<div class="game-card">
+  <div class="picture"></div>
+  <div class="description">
+    <div class="name">{{ game.name }}</div>
+    <div class="release-date">
+      Release Date: {{ game.first_release_date | date: 'MM/d/yyyy' }}
+    </div>
+    <div class="summary">{{ game.summary }}</div>
+  </div>
+  <div class="rating">{{ oneDigitRating() }}</div>
+</div>

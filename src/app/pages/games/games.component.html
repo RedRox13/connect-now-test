@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <app-filter [formControl]="filterController"></app-filter>
+  <div class="games">
+    <div *ngFor="let game of games$ | async; trackBy: trackById">
+      <app-game-card [game]="game"></app-game-card>
+    </div>
+    <div class="spinner" *ngIf="loading$ | async"></div>
+  </div>
+</div>

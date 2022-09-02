@@ -1,0 +1,95 @@
+@import "variables";
+
+.wrapper {
+  width: 600px;
+  margin: 120px auto;
+
+  .heading {
+    font-size: 24px;
+    font-family: $font-heading;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $heading;
+    margin-bottom: 20px;
+  }
+
+  .subheading {
+    margin-bottom: 50px;
+  }
+
+  form {
+    padding: 20px;
+    background-color: $card-bg;
+
+    .form-heading {
+      margin-bottom: 20px;
+      font-family: $font-heading;
+      color: $heading;
+      text-transform: capitalize;
+      font-size: 18px;
+    }
+
+    .contacts {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-input {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+
+      label {
+        font-family: $font-heading;
+        color: $heading;
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      input, textarea {
+        background-color: $input-bg;
+        border: 0;
+        padding: 8px;
+        color: $text;
+        outline: none;
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+
+    .send-btn {
+      display: flex;
+      margin: 15px 0 0 auto;
+      padding: 6px 20px;
+      border: 0;
+      color: $heading;
+      background-color: $btn;
+      font-family: $font-heading;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-laptop) {
+  .wrapper {
+    width: calc(100% - 20vw);
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .wrapper {
+    width: 100%;
+
+    form {
+      padding: 15px;
+
+      .contacts {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  }
+}

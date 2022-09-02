@@ -1,0 +1,35 @@
+@import "variables";
+
+.navigation {
+  gap: 30px;
+  margin-bottom: 60px;
+
+  .link {
+    position: relative;
+    padding: 34px 40px 0;
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $heading;
+
+    &.active::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: attr(alt);
+      opacity: 0.2;
+      font-size: 54px;
+      color: $text;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-laptop) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="container" [formGroup]="form">
+  <div class="track">
+    <div class="progress" #progressRef></div>
+  </div>
+  <div class="inputs">
+    <input class="input-left"
+           type="range"
+           min="0"
+           max="10"
+           formControlName="left"
+    >
+    <input class="input-right"
+           type="range"
+           min="0"
+           max="10"
+           formControlName="right"
+    >
+  </div>
+</div>
