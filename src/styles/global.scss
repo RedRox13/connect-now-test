@@ -23,6 +23,11 @@ html, body {
   font-family: $font-main;
   font-size: 1rem;
   margin: 0;
-  background: $body-bg;
   color: $text;
+}
+
+.required-asterisk::after {
+  color: $btn;
+  margin-left: 4px;
+  content: '*';
 }

@@ -29,7 +29,7 @@ export class GamesComponent {
     }
 
     this.games$ = this.filterController.valueChanges.pipe(
-      debounceTime(400),
+      debounceTime(200),
       startWith(null),
       distinctUntilChanged(),
       tap(() => this.loading$.next(true)),

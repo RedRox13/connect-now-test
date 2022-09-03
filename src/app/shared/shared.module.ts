@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RangeSliderComponent } from './components/range-slider/range-slider.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RequiredAsteriskDirective } from './directives/required-asterisk/required-asterisk.directive';
 
 
 @NgModule({
   declarations: [
     MenuComponent,
-    RangeSliderComponent
+    RangeSliderComponent,
+    RequiredAsteriskDirective
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
     // Components
     MenuComponent,
-    RangeSliderComponent
+    RangeSliderComponent,
+
+    // Directives
+    RequiredAsteriskDirective
   ]
 })
 export class SharedModule { }

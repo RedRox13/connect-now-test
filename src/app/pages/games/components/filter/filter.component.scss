@@ -107,6 +107,7 @@
         right: 10px;
         top: calc(50% - 10px);
         transform: rotate(0deg);
+        cursor: pointer;
       }
     }
   }
@@ -127,7 +128,7 @@
   .wrapper {
     .row {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       gap: 20px;
 
       .form-input:nth-of-type(2) {

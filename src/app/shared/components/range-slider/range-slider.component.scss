@@ -41,6 +41,7 @@
       pointer-events: auto;
       background-color: $btn;
       appearance: none;
+      cursor: pointer;
 
       &:hover {
         box-shadow: 0 0 0 10px rgba($btn, 0.2);
@@ -55,6 +56,7 @@
       pointer-events: auto;
       background-color: $btn;
       -moz-appearance: none;
+      cursor: pointer;
 
       &:hover {
         box-shadow: 0 0 0 10px rgba($btn, 0.2);
